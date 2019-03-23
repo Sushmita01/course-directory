@@ -1,0 +1,32 @@
+.course-item {
+    font-family: "Open Sans",sans-serif;
+    height: 100px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: none;
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+    padding: 15px;
+    text-align: left;
+    position: relative;
+    background: #fff;
+    box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
+    border-radius: .375rem;
+    transition: .3s;
+
+    .card_inner {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #dbe2e8;
+        .primary-heading {
+            display: block;
+        }
+        .collab-details {
+            display: inline;
+        }
+    }
+}

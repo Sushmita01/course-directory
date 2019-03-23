@@ -1,0 +1,17 @@
+<article class="course-item">
+  <div class="card_inner">
+    <div class="primary-heading">{{name}}</div>
+    <div class="collab-details">
+      <span class="provider">{{"From:"+provider}}</span>
+      <span class="university">{{"Collaboration with : "+universities}}</span>
+    </div>
+  </div>
+  <div class="card_lower">
+    <div class="expander pointer left">Course Details
+    </div>
+    <div *ngIf="expanded" class="card_expansion"></div>
+    </div>
+
+</article> 
+
+
