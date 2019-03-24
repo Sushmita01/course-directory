@@ -1,3 +1,20 @@
 <section class="course-list-container">
-  <app-course-items *ngFor="let course of courseData;index as i" [item]=course></app-course-items>
+  <header>
+      <article class="counter-container">
+        <span>Showing {{(courseData | courseFilter : filterOptions)?.length}} of {{totalRecordCount}}</span>
+      </article>
+      <section class="sort-container">
+        <div class="next-session">
+          <div class="sortFieldText">Upcoming</div>
+          <span *ngIf="sessionAscending" (click)="toggleSessionSort()" class="up"><img src="{{upArrowURL}}"></span>
+          <span *ngIf="!sessionAscending" (click)="toggleSessionSort()" class="down"><img src="{{downArrowURL}}"></span>
+        </div>
+        <div class="length">
+            <div class="sortFieldText">Duration</div>
+            <span *ngIf="durationAscending" (click)="toggleLengthSort()" class="up"><img src="{{upArrowURL}}"></span>
+            <span *ngIf="!durationAscending" (click)="toggleLengthSort()" class="down"><img src="{{downArrowURL}}"></span>
+        </div>
+      </section>
+    </header>
+  <app-course-items *ngFor="let course of courseData | courseFilter : filterOptions" [item]=course></app-course-items>
 </section>

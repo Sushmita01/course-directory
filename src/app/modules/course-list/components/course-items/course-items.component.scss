@@ -1,32 +1,72 @@
 .course-item {
     font-family: "Open Sans",sans-serif;
-    height: 100px;
     width: 70%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     border: none;
     box-sizing: border-box;
     margin-bottom: 1.5rem;
     padding: 15px;
     text-align: left;
     position: relative;
-    background: #fff;
+    background: rgb(9, 35, 68);
     box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
     border-radius: .375rem;
     transition: .3s;
-
-    .card_inner {
+    .card_upper {
         display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        padding-bottom: 1.5rem;
+        flex-direction: row;
+        justify-content:space-around;
         border-bottom: 1px solid #dbe2e8;
-        .primary-heading {
-            display: block;
+        .card_text {
+            display: flex;
+            align-items: flex-start;
+            flex-grow: 1;
+            flex-direction: column;
+            font-size: 16px;
+            font-family: 'Open Sans', Arial, sans-serif; 
+            .primary-subject {
+                color: white;
+                font-weight: 600;
+                font-size: 14px;
+            }
+            .primary-card-heading {
+                display: block;
+                color: white;
+                font-weight: 600;
+            }
+            .collab-details {
+                display: flex;
+                color: grey;
+                font-size: 16px;
+                padding: 10px 10px 10px 0;
+                .provider {
+                    margin-right: 10px;
+                }
+            }
         }
-        .collab-details {
-            display: inline;
+        .media {
+            background-color: azure;
+            width: 30%;
+            height: 40px;
+            text-align: center;
+            padding-top: 7px;
+            box-sizing: border-box;
+            border: beige 1px solid;
+            border-radius: 5px;
+        }
+    
+    }
+    .card_lower {
+        padding-top: 5px;
+        .expander {
+
+
         }
     }
+
+}
+
+a {
+    text-decoration: none;
 }

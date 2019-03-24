@@ -1,16 +1,27 @@
 <article class="course-item">
-  <div class="card_inner">
-    <div class="primary-heading">{{name}}</div>
-    <div class="collab-details">
-      <span class="provider">{{"From:"+provider}}</span>
-      <span class="university">{{"Collaboration with : "+universities}}</span>
+
+    <div class="card_upper">
+        <div class="card_text">
+          <a target="_blank" href="{{courseURL}}">
+            <div class="primary-subject">{{parentSubject}}</div>
+            <div class="primary-card-heading course-name">{{name}}</div>
+            <div class="collab-details">
+              <div class="provider">{{provider}}</div>
+              <div class="university">{{"Collaboration with : "+universities}}</div>
+            </div>
+          </a>
+        </div>
+        <div class="media">
+         <a target="_blank" href="{{videoUrl}}">Watch video</a>
+        </div>
     </div>
-  </div>
-  <div class="card_lower">
-    <div class="expander pointer left">Course Details
+    <div class="card_lower">
+      <div class="expander pointer">Course Details
+      </div>
+      <div *ngIf="expanded" class="card_expansion"></div>
     </div>
-    <div *ngIf="expanded" class="card_expansion"></div>
-    </div>
+
+
 
 </article> 
 

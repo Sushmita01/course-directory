@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { map, retry, catchError } from 'rxjs/operators';
 import *  as config from '../../environments/environment';
@@ -27,9 +27,10 @@ export class CourseDataService {
   constructor(private http:HttpClient, private utilityService: UtilityService) { }  
 
   getCourseDetails():Observable<courseDetail[]>{
+    let headers= new HttpHeaders();
+    headers = headers.append('Access-Control-Allow-Origin', '*');
+    // headers = headers.append('Access-Control-Allow-Methods', 'GET, POST, PATCH, PUT, DELETE, OPTIONS');
     let getCoursesURL= config.environment.getCoursesUrl;
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json'); 
 
     return this.http.get<courseDetail[]>(getCoursesURL); 
   }

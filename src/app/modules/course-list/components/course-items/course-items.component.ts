@@ -18,6 +18,9 @@ export class CourseItemsComponent implements OnInit, OnChanges {
   public nextSessionDate;
   public length;
   public mediaURL;
+  public videoUrl;
+  public imageUrl;
+
 
   constructor() { }
 
@@ -36,6 +39,8 @@ export class CourseItemsComponent implements OnInit, OnChanges {
     this.nextSessionDate = this.item["Next Session Date"];
     this.length = this.item["Length"];
     this.mediaURL = this.item["Video(Url)"];
+    this.videoUrl=this.mediaURL.split("|||")[0];
+    this.imageUrl=(this.mediaURL.split("|||").length > 1 ?  this.mediaURL.split("|||")[1] : null;
 
   }
 

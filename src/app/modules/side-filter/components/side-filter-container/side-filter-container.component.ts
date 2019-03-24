@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import { CourseDataService } from 'src/app/services/course-data.service';
 
@@ -8,7 +8,7 @@ import { CourseDataService } from 'src/app/services/course-data.service';
   templateUrl: './side-filter-container.component.html',
   styleUrls: ['./side-filter-container.component.scss']
 })
-export class SideFilterContainerComponent implements OnInit,OnChanges {
+export class SideFilterContainerComponent implements OnInit {
   allProviders: string[];
   allCollaborators: string[];
   allPaths: string[];
@@ -31,9 +31,8 @@ export class SideFilterContainerComponent implements OnInit,OnChanges {
 
 
   emitFilterEvents() {
-    let emitObject= {"Provider":this.selectedProviders,"Universities.Institutions":this.selectedCollaborators,"Parent Subject":this.selectedPaths,"Child Subject": null}
-    console.log(emitObject)
-    // this.filterSelectEvent.emit()
+    let emitObject= {"Provider" : this.selectedProviders,"Universities.Institutions" : this.selectedCollaborators,"Parent Subject" : this.selectedPaths,"Child Subject" : null}
+    this.filterSelectEvent.emit(emitObject);
   }
 
   getProvidersData() {
@@ -69,11 +68,5 @@ export class SideFilterContainerComponent implements OnInit,OnChanges {
     this.emitFilterEvents();
 
   }
-
-
-  ngOnChanges() {
-
-  }
-
 
 }

@@ -1,5 +1,6 @@
 export const IMAGES = Object();
 
-// GENERIC
-// IMAGES.BLUME_WHITE_LOGO = 'assets/images/blumeglobal-white.png';
-// IMAGES.BLUME_GREY_LOGO = 'assets/images/blumeglobal-grey.png';
+// SORT ICONS
+IMAGES.UP_ARROW = '../assets/images/arrow-down.png';
+IMAGES.DOWN_ARROW = '../assets/images/arrow-up.png';
+
