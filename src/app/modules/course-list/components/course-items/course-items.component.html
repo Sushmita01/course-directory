@@ -2,23 +2,34 @@
 
     <div class="card_upper">
         <div class="card_text">
-          <a target="_blank" href="{{courseURL}}">
             <div class="primary-subject">{{parentSubject}}</div>
-            <div class="primary-card-heading course-name">{{name}}</div>
-            <div class="collab-details">
-              <div class="provider">{{provider}}</div>
-              <div class="university">{{"Collaboration with : "+universities}}</div>
+            <div class="primary-card-heading course-name"><a target="_blank" href="{{courseURL}}">{{name}}</a></div>
+            <div class="card-upper-subdetails">
+              <div class="provider">
+                  <span class="subdetails-icon"><img src="{{providerIcon}}"></span>
+                  {{provider}}</div>
+              <div class="university">
+                  <span class="subdetails-icon"><img src="{{institutionIcon}}"></span>
+                  {{universities}}
+              </div>
             </div>
-          </a>
         </div>
         <div class="media">
          <a target="_blank" href="{{videoUrl}}">Watch video</a>
         </div>
     </div>
     <div class="card_lower">
-      <div class="expander pointer">Course Details
+      <div  (click)="toggleCard()" class="expander">
+        <span *ngIf="!expandedCard" class="action_icon expand"><img src="{{expandIcon}}"></span>
+        <span *ngIf="expandedCard" class="action_icon minimize"><img src="{{minimizeIcon}}"></span>
+        <div class="expansion-text">Course Details</div>
       </div>
-      <div *ngIf="expanded" class="card_expansion"></div>
+      <div *ngIf="expandedCard" class="card_expansion">
+          <div class="card-lower-field">{{"Course ID : "+cid}}</div>
+          <div class="card-lower-field">{{parentSubject+ " > " + childSubject}}</div>
+          <div class="card-lower-field">{{"Session Starts : "+nextSessionDate}}</div>
+          <div class="card-lower-field">{{"Course Duration : "+( length ? length : "N/A" ) + ( length ? " Months" : "" ) }}</div>
+      </div>
     </div>
 
 

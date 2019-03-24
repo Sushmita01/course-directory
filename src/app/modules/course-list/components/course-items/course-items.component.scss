@@ -26,22 +26,29 @@
             font-size: 16px;
             font-family: 'Open Sans', Arial, sans-serif; 
             .primary-subject {
-                color: white;
+                color: #a69c9c;;
                 font-weight: 600;
                 font-size: 14px;
             }
-            .primary-card-heading {
+            .primary-card-heading a {
+                text-decoration: none;
                 display: block;
                 color: white;
+                font-size: 18px;
                 font-weight: 600;
             }
-            .collab-details {
+            .card-upper-subdetails {
+                width: 100%;
                 display: flex;
-                color: grey;
+                justify-content: space-between;
+                color: #a69c9c;;
                 font-size: 16px;
-                padding: 10px 10px 10px 0;
+                padding: 30px 10px 10px 0;
                 .provider {
-                    margin-right: 10px;
+                    // margin-right: 20px;
+                }
+                .subdetails-icon {
+
                 }
             }
         }
@@ -60,8 +67,32 @@
     .card_lower {
         padding-top: 5px;
         .expander {
+            display: flex;
+            flex-direction: row;
+            cursor: pointer;
+            .action_icon {
+                img {
+                    width: 14px;
+                    height: 14px;
+                }
+                margin-right: 10px;
+            }
+            .expansion-text {
+                color: #608d8b;
+                padding-bottom: 5px;
+            }
 
-
+        }
+        .card_expansion {
+            background-color: white;
+            color: #062207;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border-radius: 5px;
+            .card-lower-field {
+                // font-weight: 400;
+            }
         }
     }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CourseDataService } from 'src/app/services/course-data.service';
 import { IMAGES as IMAGES } from '../../../../../environments/config.all';
 
@@ -12,8 +12,8 @@ export class CourseListContainerComponent implements OnInit {
   public courseData : Array<object>;
   public totalRecordCount: number;
   public images;
-  public upArrowURL : string;
-  public downArrowURL : string;
+  public upArrowIcon : string;
+  public downArrowIcon : string;
   public sessionAscending: boolean = true;
   public durationAscending: boolean = true;
   public sortObject: Object;
@@ -22,8 +22,8 @@ export class CourseListContainerComponent implements OnInit {
 
   constructor(private courseDataService: CourseDataService) {
     this.images=IMAGES;
-    this.upArrowURL = this.images.UP_ARROW;
-    this.downArrowURL = this.images.DOWN_ARROW ;
+    this.upArrowIcon = this.images.UP_ARROW;
+    this.downArrowIcon = this.images.DOWN_ARROW ;
    }
 
   ngOnInit() {
