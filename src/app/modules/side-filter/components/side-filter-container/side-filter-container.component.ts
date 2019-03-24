@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, OnChanges, EventEmitter, Output } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import { CourseDataService } from 'src/app/services/course-data.service';
 
@@ -9,13 +9,17 @@ import { CourseDataService } from 'src/app/services/course-data.service';
   styleUrls: ['./side-filter-container.component.scss']
 })
 export class SideFilterContainerComponent implements OnInit,OnChanges {
-  providers: string[];
-  collaborators: string[];
-  paths: string[];
+  allProviders: string[];
+  allCollaborators: string[];
+  allPaths: string[];
+  selectedProviders = null;
+  selectedCollaborators = null;
+  selectedPaths = null;
   providerFormControl = new FormControl()
   collaboratorFormControl = new FormControl();
   pathFormControl = new FormControl();
-
+  @Output()
+  filterSelectEvent: EventEmitter<object> = new EventEmitter()
 
   constructor(private courseDataService: CourseDataService) { }
 
@@ -26,40 +30,48 @@ export class SideFilterContainerComponent implements OnInit,OnChanges {
   }
 
 
+  emitFilterEvents() {
+    let emitObject= {"Provider":this.selectedProviders,"Universities.Institutions":this.selectedCollaborators,"Parent Subject":this.selectedPaths,"Child Subject": null}
+    console.log(emitObject)
+    // this.filterSelectEvent.emit()
+  }
+
   getProvidersData() {
     this.courseDataService.getProviderDetails().subscribe((data)=> {
-      this.providers=data;
+      this.allProviders=data;
     })
   }
 
   getCollabData() {
     this.courseDataService.getCollabDetails().subscribe((data)=> {
-      this.collaborators=data;
+      this.allCollaborators=data;
     })
   }
 
   getFieldData() {
     this.courseDataService.getParentFieldDetails().subscribe((data)=> {
-      this.paths=data;
+      this.allPaths=data;
     })
   }
 
   providerChange(e) {
-    console.log(e);
+    this.selectedProviders=e;
+    this.emitFilterEvents();
   }
   collChange(e) {
-    console.log(e);
+    this.selectedCollaborators=e;
+    this.emitFilterEvents();
+
   }
   
   pathChange(e) {
-    console.log(e);
+    this.selectedPaths=e;
+    this.emitFilterEvents();
+
   }
 
 
   ngOnChanges() {
-    console.log(this.providerFormControl);
-    console.log(this.collaboratorFormControl);
-    console.log(this.pathFormControl);
 
   }
 

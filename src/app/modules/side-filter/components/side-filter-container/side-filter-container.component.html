@@ -3,19 +3,19 @@
         <mat-form-field appearance="outline">
                 <mat-label>Course Provider</mat-label>
                 <mat-select [formControl]="providerFormControl"  (selectionChange)="providerChange($event.value)" multiple>
-                    <mat-option *ngFor="let provider of providers" [value]="provider">{{provider}}</mat-option>
+                    <mat-option *ngFor="let provider of allProviders" [value]="provider">{{provider}}</mat-option>
                 </mat-select>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Collaborators</mat-label>
                 <mat-select [formControl]="collaboratorFormControl" (selectionChange)="collChange($event.value)" multiple>
-                    <mat-option *ngFor="let collaborator of collaborators"  [value]="collaborator">{{collaborator}}</mat-option>
+                    <mat-option *ngFor="let collaborator of allCollaborators"  [value]="collaborator">{{collaborator}}</mat-option>
                 </mat-select>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Paths</mat-label>
                 <mat-select [formControl]="pathFormControl"  (selectionChange)="pathChange($event.value)" multiple>
-                    <mat-option *ngFor="let path of paths" [value]="path">{{provider}}</mat-option>
+                    <mat-option *ngFor="let path of allPaths" [value]="path">{{path}}</mat-option>
                 </mat-select>
             </mat-form-field>
     </div>

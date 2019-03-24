@@ -16,7 +16,6 @@ export class UtilityService {
         }
         else {
           el.split('|||').forEach((elem)=> {
-            console.log("elem");
             if (set.indexOf(elem)==-1 && elem!=null && elem!=undefined && elem!="") {
               set.push(elem);
             }

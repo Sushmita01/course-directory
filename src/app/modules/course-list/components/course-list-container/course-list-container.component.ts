@@ -17,11 +17,8 @@ export class CourseListContainerComponent implements OnInit {
 
   getCourseData() {
     this.courseDataService.getCourseDetails().subscribe((data)=> {
+      console.log(data);
       this.courseData=data;
-    },
-    (err)=> {},
-    ()=> {
-
     })
   } 
 
