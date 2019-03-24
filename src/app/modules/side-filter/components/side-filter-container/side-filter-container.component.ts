@@ -12,12 +12,15 @@ export class SideFilterContainerComponent implements OnInit {
   allProviders: string[];
   allCollaborators: string[];
   allPaths: string[];
+  allSubjects: string[];
   selectedProviders = null;
   selectedCollaborators = null;
   selectedPaths = null;
+  selectedSubjects = null;
   providerFormControl = new FormControl()
   collaboratorFormControl = new FormControl();
   pathFormControl = new FormControl();
+  subjectFormControl = new FormControl();
   @Output()
   filterSelectEvent: EventEmitter<object> = new EventEmitter()
 
@@ -26,12 +29,13 @@ export class SideFilterContainerComponent implements OnInit {
   ngOnInit() {
     this.getProvidersData();
     this.getCollabData();
-    this.getFieldData()
+    this.getFieldData();
+    this.getSubjectData();
   }
 
 
   emitFilterEvents() {
-    let emitObject= {"Provider" : this.selectedProviders,"Universities.Institutions" : this.selectedCollaborators,"Parent Subject" : this.selectedPaths,"Child Subject" : null}
+    let emitObject= {"Provider" : this.selectedProviders,"Universities.Institutions" : this.selectedCollaborators,"Parent Subject" : this.selectedPaths,"Child Subject" : this.selectedSubjects}
     this.filterSelectEvent.emit(emitObject);
   }
 
@@ -53,6 +57,12 @@ export class SideFilterContainerComponent implements OnInit {
     })
   }
 
+  getSubjectData() {
+    this.courseDataService.getChildFieldDetails().subscribe((data)=> {
+      this.allSubjects=data;
+    })
+  }
+
   providerChange(e) {
     this.selectedProviders=e;
     this.emitFilterEvents();
@@ -65,6 +75,12 @@ export class SideFilterContainerComponent implements OnInit {
   
   pathChange(e) {
     this.selectedPaths=e;
+    this.emitFilterEvents();
+
+  }
+
+  subjectChange(e) {
+    this.selectedSubjects=e;
     this.emitFilterEvents();
 
   }

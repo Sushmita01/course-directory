@@ -10,3 +10,5 @@ IMAGES.MINIMIZE = '../assets/images/minimize.png';
 IMAGES.INSTITUTION = '../assets/images/institution.png';
 IMAGES.PROVIDER = '../assets/images/provider.png';
 
+//404 page
+IMAGES.DINO = '../assets/images/dino.png';

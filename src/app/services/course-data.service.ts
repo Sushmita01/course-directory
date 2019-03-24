@@ -77,4 +77,18 @@ export class CourseDataService {
       })
     ); 
   }
+
+  getChildFieldDetails():Observable<string[]> {
+    let getCoursesURL= config.environment.getCoursesUrl;
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json'); 
+    return this.http.get<string[]>(getCoursesURL).pipe(
+      map((data: any[]) => {
+        let arrayWithDuplicates=data.map((value)=> {
+          return value["Child Subject"];
+        });
+        return this.utilityService.getFormattedArray(arrayWithDuplicates);
+      })
+    );
+  }
 }
