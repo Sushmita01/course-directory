@@ -16,5 +16,5 @@
         </div>
       </section>
     </header>
-  <app-course-items *ngFor="let course of courseData | courseFilter : filterOptions" [item]=course></app-course-items>
+  <app-course-items *ngFor="let course of courseData | courseFilter : filterOptions | courseSort : sortObject" [item]=course></app-course-items>
 </section>

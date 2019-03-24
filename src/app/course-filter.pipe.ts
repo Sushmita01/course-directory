@@ -8,7 +8,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class CourseFilterPipe implements PipeTransform {
 
   transform(values: any[] = [], args?: any): any {
-    console.log(args);
+    if (args) console.log(args);
 
 
     if (args && Array.isArray(values)) {

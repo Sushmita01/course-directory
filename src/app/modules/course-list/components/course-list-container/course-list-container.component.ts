@@ -31,8 +31,7 @@ export class CourseListContainerComponent implements OnInit {
   }
 
   constructSortPipe() {
-    this.sortObject = {"session":this.sessionAscending,"duration":this.durationAscending};
-    console.log("Sorting:",this.sortObject);
+    this.sortObject = {"Next Session Date":this.sessionAscending,"Length":this.durationAscending};
   }
 
   getCourseData() {
