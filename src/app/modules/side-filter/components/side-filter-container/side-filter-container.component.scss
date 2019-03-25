@@ -16,7 +16,11 @@
         font-size: 18px;
         margin-left: 95%;
         display: none;
-        margin-top: -5%;
+        margin-top: -10%;
+        cursor: pointer;
+    }
+    .close-button:hover {
+        color: 4e4d45;
     }
     .filter-box {
         width: 100%;

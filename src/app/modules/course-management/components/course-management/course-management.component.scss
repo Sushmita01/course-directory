@@ -22,6 +22,7 @@
             width: 30%;
             height: $hundred-percent;
             overflow: auto;
+            
         }
         
         #list-container {
@@ -47,6 +48,7 @@
         #list-container {
             width: 100% !important;
         }
+
     }
 
     .hide {
@@ -56,8 +58,8 @@
         display: inline !important; 
         position: absolute;
         z-index: 2;  
+
     }
 }
-
 
 
