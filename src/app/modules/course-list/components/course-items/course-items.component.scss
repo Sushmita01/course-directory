@@ -46,16 +46,36 @@
                 color: $card-upper-sub-details-color;
                 font-size: $font-size-medium;
                 padding: 30px 10px 10px 0;
+                .subdetails-icon {
+                    padding: 3px 5px 0px 0px;
+                }
+                .provider {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: row;
+                    .provider-text {
+                    }
+                }
+                .university {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: row;
+                    .uni-list-container {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
             }
         }
         .media {
-            background-color: azure;
+            background-color: $white-color;
             width: 30%;
             height: 40px;
             text-align: center;
             padding-top: 7px;
             box-sizing: border-box;
-            border: beige 1px solid;
+            border: #d8d8c2 1px solid;
             border-radius: $border-radius;
             a {
                 color: #005d57;
@@ -89,6 +109,7 @@
             flex-direction: column;
             padding: 20px;
             border-radius: $border-radius;
+            border: #cfdada solid 1px;
         }
     }
 

@@ -6,11 +6,14 @@
             <div class="primary-card-heading course-name"><a target="_blank" href="{{courseURL}}">{{name}}</a></div>
             <div class="card-upper-subdetails">
               <div class="provider">
-                  <span class="subdetails-icon"><img src="{{providerIcon}}"></span>
-                  {{provider}}</div>
+                  <div class="subdetails-icon"><img src="{{providerIcon}}"></div>
+                  <div class="provider-text">{{provider}}</div>
+                </div>
               <div class="university">
-                  <span class="subdetails-icon"><img src="{{institutionIcon}}"></span>
-                  {{universities}}
+                  <div class="subdetails-icon"><img src="{{institutionIcon}}"></div>
+                  <div  class="uni-list-container">
+                    <div *ngFor="let university of universities">{{university}}</div>
+                  </div>
               </div>
             </div>
         </div>

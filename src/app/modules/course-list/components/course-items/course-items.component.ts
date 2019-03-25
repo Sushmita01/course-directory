@@ -53,7 +53,7 @@ export class CourseItemsComponent implements OnInit, OnChanges {
     this.cid=this.item["Course Id"];
     this.name=this.item["Course Name"];   //card-upper
     this.provider = this.item["Provider"];    //card-upper
-    this.universities = this.item.Universities.Institutions; //card-upper
+    this.universities = this.item.Universities.Institutions.split("|||"); //card-upper
     this.parentSubject = this.item["Parent Subject"];  //card-upper
     this.childSubject = this.item["Child Subject"];
     this.courseURL = this.item["Url"];    //card-upper
