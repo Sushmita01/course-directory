@@ -5,12 +5,15 @@ A Course Directory in which presents you a list of courses from different portal
 * Users can sort results by Next Session Date and Duration of courses.
 
 
-## Set up
+## Set up 
 
 1. Download the project folder. 
 2. Go to the project directory in command prompt and run `npm install` to install the node dependencies.
-3. Run `ng serve` for a dev server. 
-4. Navigate to `http://localhost:4200/`. 
+
+## Deployment
+
+1. Run `ng serve` for a dev server. 
+2. Navigate to `http://localhost:4200/` to see the website in action.
 
 
 ## Running unit tests
