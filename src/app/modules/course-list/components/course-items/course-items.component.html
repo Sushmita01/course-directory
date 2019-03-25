@@ -22,7 +22,7 @@
         </div>
     </div>
     <div class="card_lower">
-      <div  (click)="toggleCard()" class="expander">
+      <div  (mouseenter)="toggleCard()" (mouseleave)="toggleCard()" (click)="toggleCard()" class="expander">
         <span *ngIf="!expandedCard" class="action_icon expand"><img src="{{expandIcon}}"></span>
         <span *ngIf="expandedCard" class="action_icon minimize"><img src="{{minimizeIcon}}"></span>
         <div class="expansion-text">Course Details</div>
