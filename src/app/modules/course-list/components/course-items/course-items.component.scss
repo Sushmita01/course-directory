@@ -119,19 +119,25 @@ a {
     text-decoration: none;
 }
 
-@media screen and (max-width: 800px) {
-    .course-item {
-        width: 650px !important;
-        }
-    }
-
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 710px) {
     .course-item {
         width: 500px;
         }
     }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 711px) and (max-width: 870px) {
+    .course-item {
+        width: 650px;
+        }
+    }
+
+@media screen and (min-width: 871px) and (max-width: 949px) {
+    .course-item {
+        width: 550px;
+        }
+    }
+
+@media screen and (min-width: 950px) and (max-width: 1110px) {
     .course-item {
         width: 600px;
         }

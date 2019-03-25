@@ -37,6 +37,9 @@
             display: flex;
             flex-direction: row;
             padding-right: 20px;
+            .sort-button {
+                cursor: pointer;
+            }
             .sortFieldText {
                 color: aliceblue;
                 font-size: $font-size-small;
@@ -54,7 +57,7 @@
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 870px) {
     .hamburger {
         display: inline !important;
      }

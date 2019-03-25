@@ -7,13 +7,13 @@
       <section class="sort-container">
         <div class="next-session">
           <div class="sortFieldText">Upcoming</div>
-          <span *ngIf="sessionAscending" (click)="toggleSessionSort()" class="up"><img src="{{upArrowIcon}}"></span>
-          <span *ngIf="!sessionAscending" (click)="toggleSessionSort()" class="down"><img src="{{downArrowIcon}}"></span>
+          <span *ngIf="sessionAscending" (click)="toggleSessionSort()" class="sort-button"><img src="{{upArrowIcon}}"></span>
+          <span *ngIf="!sessionAscending" (click)="toggleSessionSort()" class="sort-button"><img src="{{downArrowIcon}}"></span>
         </div>
         <div class="length">
             <div class="sortFieldText">Duration</div>
-            <span *ngIf="durationAscending" (click)="toggleLengthSort()" class="up"><img src="{{upArrowIcon}}"></span>
-            <span *ngIf="!durationAscending" (click)="toggleLengthSort()" class="down"><img src="{{downArrowIcon}}"></span>
+            <span *ngIf="durationAscending" (click)="toggleLengthSort()" class="sort-button"><img src="{{upArrowIcon}}"></span>
+            <span *ngIf="!durationAscending" (click)="toggleLengthSort()" class="sort-button"><img src="{{downArrowIcon}}"></span>
         </div>
       </section>
     </header>
