@@ -1,65 +1,50 @@
 
-//Material Theme Colors
-$mat-thm-900: #0b1325;
-$mat-thm-700: #18253d;
-$mat-thm-500: #21314d;
-$mat-thm-300: #646f82;
-$mat-thm-bg: #F8F8F8;
 
-//Material Theme Accent Colors
-$mat-thm-acnt-900: #1B5E20;
-$mat-thm-acnt-700: #388E3C;
-$mat-thm-acnt-300: #81C784;
+$hundred-percent: 100%;
+$open-sans-font-family:  "Open Sans",sans-serif;
+$box-shadow-color: rgba(46,61,73,.2);
+$white-color: white;
+$font-weight-bold: 600;
+$font-size-small: 14px;
+$font-size-medium: 16px;
+$font-size-big: 18px;
+$border-radius: 5px;
 
-//REZ1 theme base styles 
-
-$thm-font: 'Open Sans', Arial, sans-serif; 
-$thm-font-color: #4a4b4d;
-$thm-content-font-size: 1em;
-$thm-content-font-color: #828282;
-$thm-caption-font-size: .7em;
-$thm-header-font-color: #202124;
-$thm-subheader-font-color: #727A8C;
-$thm-header-hfont-color: $mat-thm-900;
-$thm-gencontent-font-color: #828282; //#5f6368;
+//Page Header
+$header-bckgrnd-color:  rgb(9, 35, 68);
+$header-font-color: $white-color;
+$header-font-family: 'Arimo', sans-serif;
+$header-title-font-size: 30px;
 
 
-// Top Navigation
-$topnav-font: 'Open Sans', Arial, sans-serif; ; 
-$topnav-font-size: .8em; //16px;
-$topnav-font-color: #FFFFFF;
-$topnav-font-hover-color: $mat-thm-300;
-$topnav-font-active-color: #F2994A;
+//Page-Not-Found
+$page-not-found-bckgrnd-color:  beige;
+$page-not-found-font-color: #a08845;
+$page-not-found-title-font-size: 40px;
+$page-not-found-text-font-size: 50px;
+$page-not-found-text-font-color: #dd6436;
 
+//course-management
+$header-height: 130px;
 
-//Cover Floating Sidebar Navigation
-$sb-menu-bg: #1976D2;
-$sb-menu-font: Helvetica, sans-serif;
-$sb-menu-font-color: #ffffff;
-$sb-menu-font-color-hover: $mat-thm-300;
-$sb-menu-font-size: .8em; //16px;
-$sb-submenu-font-size: .9em;
-
-//Content Sidebar Navigation
-$csbnav-bg: #efefef;
-$csbnav-font: 'Open Sans', Arial, sans-serif; 
-$csbnav-font-size: .95em;
-$csbnav-font-color: $mat-thm-900;
-$csbnav-hover-color: $thm-header-font-color;
-$csbnav-hover-bg: #d6e6f3;
-$csbnav-selected-color: #ffffff; //$thm-header-font-color;
-$csbnav-selected-bg: #d6e6f3;
+//card-container
+$card-container-header-border-color: #b0a0a2;
+$card-container-bckgrnd-color:  #005d57;
 
 
 
-//List
-$list-bg: #ffffff;
-$list-header-font-size: 1.1em;
-$list-header-font-color: $thm-header-font-color;
-$list-subheader-font-size: .8em;
-$list-subheader-font-color: $thm-subheader-font-color;
-$list-content-font-size: $thm-content-font-size;
-$list-content-font-color: $thm-content-font-color;
+//card-item
+$course-item-bckgrnd-color:  $header-bckgrnd-color;
+$card-upper-bottom-border-color: $box-shadow-color;
+$card-upper-primary-header-color: $white-color;
+$card-upper-sub-header-color: $card-container-header-border-color;
+$card-upper-sub-details-color: #4fa2a6;
+$card-expansion-bckgrnd-color:  #5a63894d;
+$card-expansion-font-color:  #b1c3b2;
+
+
+
+
 
 
 

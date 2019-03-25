@@ -1,15 +1,15 @@
 @import '../../../../../assets/variables.scss';
 
 .course-list-container {
-    width: 100%;
-    height: 100%;
+    width: $hundred-percent;
+    height: $hundred-percent;
     display: flex;
-    font-family: "Open Sans",sans-serif;
-    font-weight: 600;
+    font-family: $open-sans-font-family;
+    font-weight: $font-weight-bold;
     flex-direction: column;
-    padding: 30px 0px 0px 30px;
+    padding: 10px 0px 0px 30px;
     box-sizing: border-box;
-    // background-color: #005d57;
+
     header {
         padding: 10px 0px 10px 5px;
         display: flex;
@@ -17,13 +17,21 @@
         justify-content: space-between;
         align-items: center;
         width: 95%;
-        margin-bottom: 25px;
-        border: #b1a1a3 2px solid;
-        border-radius: 5px;
+        margin-bottom: 15px;
+        // position: relative;
+        // z-index: 1;
+        border-bottom: $card-container-header-border-color 2px solid;
         .counter-container {
             font-family: 'Open Sans', Arial, sans-serif; 
-            color: white;
-            font-weight: 600;
+            color: $white-color;
+            font-weight: $font-weight-bold;
+            .hamburger {
+                display: none;
+                font-size:  20px;
+                margin-right: 10px;
+                color: black;
+                cursor: pointer;
+             }
         }
         .sort-container {
             display: flex;
@@ -31,7 +39,7 @@
             padding-right: 20px;
             .sortFieldText {
                 color: aliceblue;
-                font-size: 14px;
+                font-size: $font-size-small;
                 margin-right: 10px;
             }
             .next-session {
@@ -46,3 +54,8 @@
     }
 }
 
+@media screen and (max-width: 800px) {
+    .hamburger {
+        display: inline !important;
+     }
+}

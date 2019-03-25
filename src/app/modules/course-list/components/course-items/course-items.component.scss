@@ -1,6 +1,8 @@
+@import '../../../../../assets/variables.scss';
+
 .course-item {
-    font-family: "Open Sans",sans-serif;
-    width: 70%;
+    font-family: $open-sans-font-family;
+    // width: 70%;
     display: flex;
     flex-direction: column;
     border: none;
@@ -9,47 +11,41 @@
     padding: 15px;
     text-align: left;
     position: relative;
-    background: rgb(9, 35, 68);
-    box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
+    background: $course-item-bckgrnd-color;
+    box-shadow: 5px 5px 25px 0 $box-shadow-color;
     border-radius: .375rem;
     transition: .3s;
     .card_upper {
         display: flex;
         flex-direction: row;
         justify-content:space-around;
-        border-bottom: 1px solid #dbe2e8;
+        border-bottom: 1px solid $card-upper-bottom-border-color;
         .card_text {
             display: flex;
             align-items: flex-start;
             flex-grow: 1;
             flex-direction: column;
-            font-size: 16px;
-            font-family: 'Open Sans', Arial, sans-serif; 
+            font-size: $font-size-medium;
+            font-family: $open-sans-font-family; 
             .primary-subject {
-                color: #796c6c;;
-                font-weight: 600;
-                font-size: 14px;
+                color: $card-upper-sub-header-color;
+                font-weight: $font-weight-bold;
+                font-size: $font-size-small;
             }
             .primary-card-heading a {
                 text-decoration: none;
                 display: block;
-                color: white;
-                font-size: 18px;
-                font-weight: 600;
+                color: $card-upper-primary-header-color;
+                font-size: $font-size-big;
+                font-weight: $font-weight-bold;
             }
             .card-upper-subdetails {
-                width: 100%;
+                width: $hundred-percent;
                 display: flex;
                 justify-content: space-between;
-                color: #4fa2a6;;
-                font-size: 16px;
+                color: $card-upper-sub-details-color;
+                font-size: $font-size-medium;
                 padding: 30px 10px 10px 0;
-                .provider {
-
-                }
-                .subdetails-icon {
-
-                }
             }
         }
         .media {
@@ -60,7 +56,7 @@
             padding-top: 7px;
             box-sizing: border-box;
             border: beige 1px solid;
-            border-radius: 5px;
+            border-radius: $border-radius;
             a {
                 color: #005d57;
             }
@@ -75,8 +71,8 @@
             cursor: pointer;
             .action_icon {
                 img {
-                    width: 14px;
-                    height: 14px;
+                    width: $font-size-small;
+                    height: $font-size-small;
                 }
                 margin-right: 10px;
             }
@@ -87,15 +83,12 @@
 
         }
         .card_expansion {
-            background-color: #5a63894d;
-            color: #b1c3b2;
+            background-color: $card-expansion-bckgrnd-color;
+            color: $card-expansion-font-color;
             display: flex;
             flex-direction: column;
             padding: 20px;
-            border-radius: 5px;
-            .card-lower-field {
-                // font-weight: 400;
-            }
+            border-radius: $border-radius;
         }
     }
 
@@ -104,3 +97,29 @@
 a {
     text-decoration: none;
 }
+
+@media screen and (max-width: 800px) {
+    .course-item {
+        width: 650px !important;
+        }
+    }
+
+@media screen and (max-width: 950px) {
+    .course-item {
+        width: 500px;
+        }
+    }
+
+@media screen and (min-width: 950px) {
+    .course-item {
+        width: 600px;
+        }
+    }
+        
+@media screen and (min-width: 1111px) {
+    .course-item {
+        width: 700px;
+    }
+  }
+
+

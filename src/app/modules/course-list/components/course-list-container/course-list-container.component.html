@@ -1,6 +1,7 @@
 <section class="course-list-container">
   <header>
       <article class="counter-container">
+        <span (click)="expandFilterOptions()" class="hamburger" id="expand-filter-icon">&#9776;</span>
         <span>Showing {{(courseData | courseFilter : filterOptions)?.length}} of {{totalRecordCount}}</span>
       </article>
       <section class="sort-container">

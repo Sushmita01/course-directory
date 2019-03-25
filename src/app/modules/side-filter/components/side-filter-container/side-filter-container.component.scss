@@ -9,6 +9,15 @@
     background-color: white;
     border-bottom: none;
     margin-right: 1.69491525%;
+    .close-button {
+        width: 50px;
+        border-radius: 5px;
+        color: black;
+        font-size: 18px;
+        margin-left: 95%;
+        display: none;
+        margin-top: -5%;
+    }
     .filter-box {
         width: 100%;
         padding: 10px 0px 0px 20px;
@@ -24,5 +33,12 @@ mat-form-field {
     /deep/
     .mat-form-field-flex {
         width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .close-button {
+        display: inline !important;    
     }
 }

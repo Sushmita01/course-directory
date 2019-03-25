@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { CourseDataService } from 'src/app/services/course-data.service';
 import { IMAGES as IMAGES } from '../../../../../environments/config.all';
 
@@ -12,13 +12,17 @@ export class CourseListContainerComponent implements OnInit {
   public courseData : Array<object>;
   public totalRecordCount: number;
   public images;
-  public upArrowIcon : string;
-  public downArrowIcon : string;
+  public upArrowIcon: string;
+  public downArrowIcon: string;
   public sessionAscending: boolean = true;
   public durationAscending: boolean = true;
   public sortObject: Object;
+  public filterBarExpanded: boolean = false;
+  @Output() expandFilterBar: EventEmitter<boolean>= new EventEmitter();
+
   @Input() 
   filterOptions;
+
 
   constructor(private courseDataService: CourseDataService) {
     this.images=IMAGES;
@@ -51,4 +55,10 @@ export class CourseListContainerComponent implements OnInit {
     this.constructSortPipe();
 
   }
+
+  expandFilterOptions() {
+    this.filterBarExpanded =!this.filterBarExpanded;
+    this.expandFilterBar.emit(this.filterBarExpanded);  
+  }
+  
 }

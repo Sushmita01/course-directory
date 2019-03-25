@@ -22,7 +22,9 @@ export class SideFilterContainerComponent implements OnInit {
   pathFormControl = new FormControl();
   subjectFormControl = new FormControl();
   @Output()
-  filterSelectEvent: EventEmitter<object> = new EventEmitter()
+  filterSelectEvent: EventEmitter<object> = new EventEmitter();
+  @Output()
+  closeSideBarEvent: EventEmitter<boolean> = new EventEmitter();
 
   constructor(private courseDataService: CourseDataService) { }
 
@@ -83,6 +85,10 @@ export class SideFilterContainerComponent implements OnInit {
     this.selectedSubjects=e;
     this.emitFilterEvents();
 
+  }
+
+  toggleSideBar() {
+    this.closeSideBarEvent.emit(true);
   }
 
 }

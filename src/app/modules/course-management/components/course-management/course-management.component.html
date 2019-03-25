@@ -1,7 +1,7 @@
 <div class="main-container">
     <header><app-header></app-header></header>
     <main class="content-container">
-        <section id="side-filter"><app-side-filter-container (filterSelectEvent)="filterSelectRecieved($event)"></app-side-filter-container></section>
-        <section id="list-container"><app-course-list-container [filterOptions]="filterOptions"></app-course-list-container></section>
+        <section [class.show]="displayFilterSideBar" [class.hide]="!displayFilterSideBar" id="side-filter" ><app-side-filter-container (closeSideBarEvent)="this.displayFilterSideBar=false;" (filterSelectEvent)="filterSelectRecieved($event)"></app-side-filter-container></section>
+        <section id="list-container"><app-course-list-container (expandFilterBar)="filterBar($event)" [filterOptions]="filterOptions"></app-course-list-container></section>
     </main>
 </div>
