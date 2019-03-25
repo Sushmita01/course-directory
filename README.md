@@ -1,27 +1,20 @@
-# Dashboard
+# Course Directory
+A Course Directory in which presents you a list of courses from different portals, built in collaboration with various institutions ranging over a wide range of subjects.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
+* Users can filter results by Primary Subject, Child Subject, Institution and Provider.
+* Users can sort results by Next Session Date and Duration of courses.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Set up
 
-## Code scaffolding
+1. Download the project folder. 
+2. Go to the project directory in command prompt and run `npm install` to install the node dependencies.
+3. Run `ng serve` for a dev server. 
+4. Navigate to `http://localhost:4200/`. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
