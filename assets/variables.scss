@@ -11,7 +11,7 @@ $font-size-big: 18px;
 $border-radius: 5px;
 
 //Page Header
-$header-bckgrnd-color:  rgb(9, 35, 68);
+$header-bckgrnd-color:  #020d1b;
 $header-font-color: $white-color;
 $header-font-family: 'Arimo', sans-serif;
 $header-title-font-size: 30px;
@@ -28,19 +28,19 @@ $page-not-found-text-font-color: #dd6436;
 $header-height: 130px;
 
 //card-container
-$card-container-header-border-color: #b0a0a2;
+$card-container-header-border-color: $white-color;
 $card-container-bckgrnd-color:  #005d57;
 
 
 
 //card-item
-$course-item-bckgrnd-color:  $header-bckgrnd-color;
+$course-item-bckgrnd-color:  $white-color;
 $card-upper-bottom-border-color: $box-shadow-color;
-$card-upper-primary-header-color: $white-color;
-$card-upper-sub-header-color: $card-container-header-border-color;
+$card-upper-primary-header-color: #5d4545;
+$card-upper-sub-header-color: #86797b;
 $card-upper-sub-details-color: #4fa2a6;
-$card-expansion-bckgrnd-color:  #5a63894d;
-$card-expansion-font-color:  #b1c3b2;
+$card-expansion-bckgrnd-color:  #ededed4d;
+$card-expansion-font-color:  #516f53;
 
 
 
