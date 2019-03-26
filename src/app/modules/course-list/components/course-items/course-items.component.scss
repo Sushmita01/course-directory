@@ -1,6 +1,7 @@
 @import '../../../../../assets/variables.scss';
 
 .course-item {
+    
     font-family: $open-sans-font-family;
     // width: 70%;
     display: flex;
@@ -113,6 +114,9 @@
         }
     }
 
+}
+.course-item:hover {
+    background-color: $course-item-bckgrnd-color-on-hover;
 }
 
 a {

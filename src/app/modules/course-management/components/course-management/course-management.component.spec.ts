@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { SideFilterModule } from '../../../side-filter/side-filter.module';
+import { CourseListModule } from '../../../course-list/course-list.module';
+import { HeaderComponent } from '../../../../components/header/header.component';
 import { CourseManagementComponent } from './course-management.component';
 
 describe('CourseManagementComponent', () => {
@@ -8,7 +10,8 @@ describe('CourseManagementComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CourseManagementComponent ]
+      declarations: [ CourseManagementComponent, HeaderComponent],
+      imports: [SideFilterModule,CourseListModule]
     })
     .compileComponents();
   }));

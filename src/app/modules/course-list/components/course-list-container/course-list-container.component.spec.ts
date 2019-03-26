@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CourseFilterPipe } from '../../../../course-filter.pipe';
+import { CourseSortPipe } from '../../../../course-sort.pipe';
 import { CourseListContainerComponent } from './course-list-container.component';
 
 describe('CourseListContainerComponent', () => {
@@ -8,7 +9,7 @@ describe('CourseListContainerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CourseListContainerComponent ]
+      declarations: [ CourseListContainerComponent, CourseFilterPipe,CourseSortPipe ]
     })
     .compileComponents();
   }));
