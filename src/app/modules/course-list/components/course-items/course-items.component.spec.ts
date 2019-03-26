@@ -25,8 +25,8 @@ describe('CourseItemsComponent', () => {
   });
 
   it('should toggle expansion card', () => {
-    let currentvalue=this.expandedCard;
-    this.toggleCard();
-    expect(this.expandedCard).toEqual(!currentvalue);
+    let currentvalue=component.expandedCard;
+    component.toggleCard();
+    expect(component.expandedCard).toEqual(!currentvalue);
   });
 });

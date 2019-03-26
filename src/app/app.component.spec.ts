@@ -1,7 +1,8 @@
 import { TestBed, async } from '@angular/core/testing';
 import { Routes, RouterModule } from '@angular/router';
 import {RouterTestingModule} from '@angular/router/testing';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule,
+  HttpTestingController } from '@angular/common/http/testing';
 
 import { AppComponent } from './app.component';
 describe('AppComponent', () => {
@@ -10,7 +11,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
-      imports: [RouterModule, HttpClientModule,RouterTestingModule]
+      imports: [RouterModule, HttpClientTestingModule ,RouterTestingModule]
     }).compileComponents();
   }));
   it('should create the app', async(() => {
