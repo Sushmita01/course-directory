@@ -9,6 +9,8 @@ import {
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
+
+
 describe('CourseListContainerComponent', () => {
   let component: CourseListContainerComponent;
   let fixture: ComponentFixture<CourseListContainerComponent>;
@@ -30,4 +32,24 @@ describe('CourseListContainerComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should toggle next session sorting order', () => {
+    let currentvalue=component.sessionAscending;
+    component.toggleSessionSort();
+    expect(component.sessionAscending).toEqual(!currentvalue);
+  });
+
+  it('should toggle course duration sorting order', () => {
+    let currentvalue=component.durationAscending;
+    component.toggleLengthSort();
+    expect(component.durationAscending).toEqual(!currentvalue);
+  });
+
+  it('should toggle filter sidebar expansion', () => {
+    let currentvalue=component.filterBarExpanded;
+    component.expandFilterOptions();
+    expect(component.filterBarExpanded).toEqual(!currentvalue);
+  });
 });
+
+
