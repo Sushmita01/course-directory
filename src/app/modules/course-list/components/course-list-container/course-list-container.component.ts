@@ -32,6 +32,7 @@ export class CourseListContainerComponent implements OnInit {
 
   ngOnInit() {
     this.getCourseData();
+    this.constructSortPipe();
   }
 
   constructSortPipe() {

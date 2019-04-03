@@ -7,6 +7,8 @@ export class UtilityService {
 
   constructor() { }
 
+
+  //this function splits all strings containing "|||" and pushes them into the resultant array as individual elements
   getFormattedArray(arr: string[]) : string[] {
     let set=[]
     for (let el of arr) {
